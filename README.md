@@ -90,3 +90,4 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！
 7. 毛概 ✅ (Last updated: 2023-02-07)
 8. 马原 ✅ (Last updated: 2022-01-04)
 9. 心理健康 ✅ (Last updated: 2023-5-20)
+10. 体育理论考试 ✅ (Last updated: 2024-01-04)
