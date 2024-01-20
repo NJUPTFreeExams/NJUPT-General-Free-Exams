@@ -52,15 +52,13 @@ filteredList.map((post: string) => {
 
 ---
 
-<div class="sl-markdown-content">
-  
-  <slot /></div>
+<div class="sl-markdown-content"><slot /></div>
 
 {Object.entries(filesByFolder).map(([folderName, files]) => (
     <div class="sl-markdown-content" id={folderName}>
         <h5>{folderName}</h5>
         {files.map((fileName) => (
-          <a id={fileName} href={`/${course === folderName ? folderName : `${course}/${folderName}`}/${fileName}`} target="_blank">
+          <a id={fileName} href={`/NJUPT-General-Free-Exams/${course === folderName ? folderName : `${course}/${folderName}`}/${fileName}`} target="_blank">
         {fileName}
     </a><br />
         ))}

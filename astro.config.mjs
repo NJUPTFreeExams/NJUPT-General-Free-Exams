@@ -5,6 +5,8 @@ import rehypeKatex from 'rehype-katex';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://njuptfreeexams.github.io',
+	base: '/NJUPT-General-Free-Exams',
 	vite: {
 		assetsInclude: ["**/*.ppt", "**/*.pptx", "**/*.doc", "**/*.docx"]
 	  },
@@ -39,6 +41,12 @@ export default defineConfig({
 			directory: 'CS'
 		  }
 		}, {
+			label: '理学院',
+			// 自动生成一个链接分组，用于 'CS' 目录。
+			autogenerate: {
+			  directory: 'lxy'
+			}
+		}, {
 			label: '通信与信息工程学院',
 			autogenerate: {
 			  directory: 'SCIE'
@@ -62,6 +70,18 @@ export default defineConfig({
 			label: '马克思主义学院',
 			autogenerate: {
 			  directory: 'Marx'
+			}
+		}, {
+			label: '外国语学院',
+			// 自动生成一个链接分组，用于 'CS' 目录。
+			autogenerate: {
+			  directory: 'FLS'
+			}
+		}, {
+			label: '教育与技术学院',
+			// 自动生成一个链接分组，用于 'CS' 目录。
+			autogenerate: {
+			  directory: 'edu'
 			}
 		}, {
 			label: '其他',
