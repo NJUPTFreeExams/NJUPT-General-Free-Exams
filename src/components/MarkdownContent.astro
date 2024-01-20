@@ -1,0 +1,70 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import '@astrojs/starlight/style/markdown.css';
+const {entry} = Astro.props;
+const course = entry.data.title;
+
+import * as fs from 'fs';
+import * as path from 'path';
+
+function getAllFilesInFolder(folderPath: string): string[] {
+  const filesList: string[] = [];
+
+  function traverseDirectory(currentPath: string) {
+    const files = fs.readdirSync(currentPath);
+
+    files.forEach((file) => {
+      const filePath = path.join(currentPath, file);
+
+      if (fs.statSync(filePath).isDirectory()) {
+        traverseDirectory(filePath); // Recursive call for subdirectories
+      } else {
+        filesList.push(filePath);
+      }
+    });
+  }
+
+  traverseDirectory(folderPath);
+  return filesList;
+}
+
+const filesIndex = getAllFilesInFolder('./public/');
+
+const filteredList: string[] = filesIndex
+  .filter(item => item.includes(course))
+  .map(item => item.replace(/\\/g, '/').substring(6));
+
+const filesByFolder: Record<string, string[]> = {};
+
+filteredList.map((post: string) => {
+    const pathArray: string[] = post.split('/');
+    const fileName: string = pathArray[pathArray.length - 1];
+    const folders: string[] = pathArray.slice(1, -1);
+    const lastFolder: string = folders.length > 0 ? folders[folders.length - 1] : '';
+
+    if (!filesByFolder[lastFolder]) {
+        filesByFolder[lastFolder] = [];
+    }
+    filesByFolder[lastFolder].push(fileName);
+
+    return null;
+});
+
+---
+
+<div class="sl-markdown-content">
+  
+  <slot /></div>
+
+{Object.entries(filesByFolder).map(([folderName, files]) => (
+    <div class="sl-markdown-content" id={folderName}>
+        <h5>{folderName}</h5>
+        {files.map((fileName) => (
+          <a id={fileName} href={`/${course === folderName ? folderName : `${course}/${folderName}`}/${fileName}`} target="_blank">
+        {fileName}
+    </a><br />
+        ))}
+    </div>
+))
+}
+
