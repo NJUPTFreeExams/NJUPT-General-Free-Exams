@@ -54,11 +54,6 @@ export default defineConfig({
 			directory: 'IC'
 		  }
 		}, {
-			label: '集成电路科学与工程学院',
-			autogenerate: {
-			  directory: 'IC'
-			}
-		}, {
 			label: '管理学院',
 			autogenerate: {
 			  directory: 'Management'
@@ -69,22 +64,13 @@ export default defineConfig({
 			  directory: 'Marx'
 			}
 		}, {
-			label: '集成电路科学与工程学院',
-			autogenerate: {
-			  directory: 'IC'
-			}
-		}, {
-			label: '集成电路科学与工程学院',
-			autogenerate: {
-			  directory: 'IC'
-			}
-		}, {
 			label: '其他',
 			autogenerate: {
 			  directory: 'others'
 			}
 		}, {
 			label: '贡献文档',
+			collapsed: true,
 			autogenerate: {
 			  directory: 'reserve'
 			}
