@@ -1,0 +1,31 @@
+---
+/// <reference path="../../node_modules/@astrojs/starlight/virtual.d.ts"/>
+import type { Props } from '@astrojs/starlight/props';
+
+import { EditLink, LastUpdated } from 'virtual:starlight/components';
+
+import Twikoo from '../components/Twikoo.astro';
+---
+
+<footer>
+	<div class="meta sl-flex">
+		<EditLink {...Astro.props} />
+		<LastUpdated {...Astro.props} />
+	</div>
+	该页总访问量<span id="busuanzi_value_page_pv"></span>次
+	<Twikoo />
+</footer>
+
+<style>
+	.meta {
+		gap: 0.75rem 3rem;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-block: 3rem 1.5rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.meta > :global(p:only-child) {
+		margin-inline-start: auto;
+	}
+</style>
