@@ -1,10 +1,10 @@
 ---
 title: UploadGuide
-description: 上传指南
+description: 上传指南。本篇主要介绍如何向本项目提交（PR）相关资料，以及相关注意事项。
 ---
 
 > 创建：2021-08-29 @toulzx  
-> 修改：2021-08-30  
+> 修改：2024-02-11 @Dilettante258
 >
 > 本篇主要介绍如何向本项目提交（PR）相关资料，以及相关注意事项。
 
@@ -36,7 +36,18 @@ description: 上传指南
 
 你可能还需要对过大的 `pdf` 文件进行压缩：[pdf压缩](https://www.pdf365.cn/pdf-compress/)
 
+:::note
+因为在`/public/`文件夹下文件都不会自动构建网页。所以如果你想要上传md文件，建议在`src/content/docs/reserve`文件夹下复制一份，并加上frontmatter
+```yaml "（可选）"
+---
+title: 文件标题
+description: 内容描述（可选）
+---
+```
+:::
+
 ### 请按类存放资料，并使用合适的命名方式
+
 
 1. 例如，我们一般会将课件统一存放在 `课件` 文件夹下，将历年考试试卷统一存放在 `试卷` 文件夹下。
 
@@ -44,9 +55,15 @@ description: 上传指南
 
 3. 如果你可以确定一份资料的创建时期（特别是针对试卷），我们推荐文件名中出现这样的字段：`2021-2022-1`，这表示它来自 `2021-2022 学年第 1 学期`。
 
+:::caution
+该项目在增加前端界面后，文件目录结构发生了很大变化，请将上传的资料统一放置在`public`文件夹下对应的课程目录下。
+
+如果需要新开一门课程，请在`public`文件夹下新建一个文件夹，并在`src/content/docs`中对应开课学院的文件夹下新建一个md文件，要求md文件的frontmatter的**title与新建的文件夹的名称保持完全一致**。
+:::
+
 ### 如有需要，可为子文件夹创建 README 并作说明
 
-这里有一份 README.md 文件[`样例`](./sample.md)。
+这里有一份 README.md 文件[`样例`](https://github.com/NJUPTFreeExams/njuptfreeexams.github.io/blob/master/sample.md)。
 
 GitHub 全方位支持 Markdown 语法，最常见的是 repo 中的 README 文档。事实上，由于轻量、简洁易读、可融入 (X)HTML 的特性，Markdown 标记语言被广泛使用。它简单易学，如果你想了解更多有关 Markdown 的特点和语法，欢迎访问 [`markdown.cn`](https://www.markdown.cn/)。
 

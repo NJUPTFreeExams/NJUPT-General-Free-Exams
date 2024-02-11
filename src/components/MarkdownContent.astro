@@ -28,28 +28,40 @@ function getAllFilesInFolder(folderPath: string): string[] {
   return filesList;
 }
 
-const filesIndex = getAllFilesInFolder('./public/');
+function splitString(str: string): string[] {
+    const index = str.indexOf('/', 1);
+    if (index === -1) {
+        // 如果字符串中不存在 '/'，则返回整个字符串作为数组中的唯一元素
+        return [str];
+    } else {
+        // 使用 slice 方法将字符串从第一个 '/' 分割成两部分
+        const firstPart = str.slice(1, index);
+        const secondPart = str.slice(index + 1);
+        return [firstPart, secondPart];
+    }
+}
 
-const filteredList: string[] = filesIndex
+
+const filteredList: string[] = getAllFilesInFolder('./public/')
   .filter(item => item.includes(course))
   .map(item => item.replace(/\\/g, '/').substring(6));
 
 const filesByFolder: Record<string, string[]> = {};
-
+//console.log(filteredList)
 filteredList.map((post: string) => {
-    const pathArray: string[] = post.split('/');
-    const fileName: string = pathArray[pathArray.length - 1];
-    const folders: string[] = pathArray.slice(1, -1);
-    const lastFolder: string = folders.length > 0 ? folders[folders.length - 1] : '';
-
-    if (!filesByFolder[lastFolder]) {
-        filesByFolder[lastFolder] = [];
+    const folders: string[] = splitString(post.slice(1, post.lastIndexOf('/')));
+    const fileName: string = post.slice(post.lastIndexOf('/')+1);
+    // const folders: string[] = pathArray.slice(1, -1);
+    const subFolder: string = folders.length > 0 ? folders[folders.length - 1] : '';
+    console.log(folders)
+    if (!filesByFolder[subFolder]) {
+        filesByFolder[subFolder] = [];
     }
-    filesByFolder[lastFolder].push(fileName);
+    filesByFolder[subFolder].push(fileName);
 
     return null;
 });
-
+console.log(filesByFolder)
 ---
 
 <div class="sl-markdown-content"><slot /></div>
@@ -58,7 +70,7 @@ filteredList.map((post: string) => {
     <div class="sl-markdown-content" id={folderName}>
         <h5>{folderName}</h5>
         {files.map((fileName) => (
-          <a id={fileName} href={`/NJUPT-General-Free-Exams/${course === folderName ? folderName : `${course}/${folderName}`}/${fileName}`} target="_blank">
+          <a id={fileName} href={`/${course === folderName ? folderName : `${course}/${folderName}`}/${fileName}`} target="_blank">
         {fileName}
     </a><br />
         ))}

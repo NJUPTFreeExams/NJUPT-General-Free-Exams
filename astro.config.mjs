@@ -6,7 +6,7 @@ import rehypeKatex from 'rehype-katex';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://njuptfreeexams.github.io',
-	base: '/NJUPT-General-Free-Exams',
+	// base: '/NJUPT-General-Free-Exams',
 	vite: {
 		assetsInclude: ["**/*.ppt", "**/*.pptx", "**/*.doc", "**/*.docx"]
 	  },
