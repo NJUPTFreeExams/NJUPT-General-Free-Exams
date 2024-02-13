@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   # 允许你在 GitHub 上的 Actions 标签中手动触发此“工作流程”
   workflow_dispatch:
 
@@ -15,6 +15,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'NJUPTFreeExams'
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
@@ -28,6 +29,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'NJUPTFreeExams'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
