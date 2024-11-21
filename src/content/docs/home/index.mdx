@@ -1,108 +1,84 @@
 ---
-title: NJUPT-General-Free-Exams
-description: 项目介绍
+title: NJUPTFreeExams 组织及其项目介绍
 ---
-import { Card, CardGrid } from '@astrojs/starlight/components';
 
-<div class="badge-container not-content">
-    <div class="badge">
-        <a href="https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams/stargazers">
-            <img src="https://img.shields.io/github/stars/NJUPTFreeExams/NJUPT-General-Free-Exams.svg?style=for-the-badge" alt="stargazers"></img>
-        </a>
-    </div>
-    <div class="badge">
-        <a href="https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams/network/members">
-            <img src="https://img.shields.io/github/forks/NJUPTFreeExams/NJUPT-General-Free-Exams.svg?style=for-the-badge" alt="contributors"></img>
-        </a>
-    </div>
-    <div class="badge">
-        <a href="https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams/pulls">
-            <img src="https://img.shields.io/github/issues-pr-closed-raw/NJUPTFreeExams/NJUPT-General-Free-Exams.svg?style=for-the-badge" alt="pulls"></img>
-        </a>
-    </div>
-    <div class="badge">
-        <img src="https://img.shields.io/github/repo-size/NJUPTFreeExams/NJUPT-General-Free-Exams.svg?style=for-the-badge" alt="size"></img>
-    </div>
-</div>
+[NJUPTFreeExams](https://github.com/NJUPTFreeExams) 是由 **南京邮电大学** 计算机学院学生建立的一个 GitHub 组织，旨在收集校内历年资料造福后人。
 
-受 [`浙江大学课程攻略共享计划`](https://github.com/QSCTech/zju-icicles) 和 [`清华大学计算机系课程攻略`](https://github.com/Trinkle23897/THU-CST-Cracker) 等项目启发，我们决定将**南京邮电大学**通识类课程的历年资料整理出来，以利后人。上述两项目对本资料集有重要影响，在这里向他们表示感谢。
+本组织及相关项目受到 [`浙江大学课程攻略共享计划`](https://github.com/QSCTech/zju-icicles) 和 [`清华大学计算机系课程攻略`](https://github.com/PKUanonym/REKCARC-TSC-UHT) 等项目的启发，在这里向他们表示感谢。
 
 ## 说明
 
-📍在使用本项目的资料之前，请务必阅读：[`NJUPTFreeExams 使用说明`](/homepage/userguide).
+在使用本项目的资料之前，请务必阅读 [《用户指南》](/home/user-guide)。
 
-1. **本repo下资料仅供个人学习交流使用，请在下载后24小时内删除。如有侵权，请及时与我们联系。**
-2. 资料仅供参考，请自己判断适用性。
-3. 部分资料已经有些年头，如果大家手头有更好的资料，敬请PR。 
-4. 如果大家发现资料中的问题，请不要犹豫，直接提出issue, 我们会尽快修改。
-5. 在PR时，建议上传pdf文件。推荐使用 Adobe Acrobat 进行doc/docx文件的转换。
-6. 请**不要**上传课程实验代码，我们认为这些需要同学们自己进行摸索。
-7. 请**不要**上传超过100M的单个文件，因为本项目没有启用`git-lfs`。
-8. 如果觉得本仓库有用，欢迎给个Star😼来自大家的关注、维护和贡献，才是让这个资料集继续存在的核心动力🥰
+1. **本组织收集整理的资料仅供个人学习交流使用，请在下载后 24 小时内删除。严禁删改、二传，或用作商业用途！如有侵权，请及时与我们联系。**
+2. 资料仅供参考，请自行判断适用性。
+3. 取决于资料的格式及其贡献方法，您可以以在线或下载的方式查看贡献者们贡献的资料，具体请见[检索及下载指南](#检索及下载指南)。
+4. 部分资料已经有些年头，如果大家手头有更好的资料，欢迎[提交拉取请求（Pull Request, PR）](https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams/compare)，具体请见[贡献指南](#贡献指南)。
+5. 如果您发现资料存在问题，或者对于本项目有任何改进建议，请[提交议题（Issue）](https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams/issues/new/choose)，具体请见[议题提交指南](#议题提交指南)。
 
-## 贡献
+如果觉得本仓库有用，请在 GitHub 上为我们点个:star:！来自大家的关注、维护和贡献，才是让这个资料集继续存在的核心动力:smiling_face_with_three_hearts:。
 
-**欢迎贡献！**
+## 资料分类
 
-Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！
+本组织根据资料的种类，将资料分类存放在不同的仓库下：
 
-### 📌如果你想 Pull Request
+- 通识课资料：[`NJUPT-General-Free-Exams`](https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams)
+- 计算机相关专业资料：[`NJUPT-CS-FREE`](https://github.com/NJUPTFreeExams/NJUPT-CS-FREE)
+- 自动化专业资料：[`NJUPT-AUTO-Free-Exams`](https://github.com/NJUPTFreeExams/NJUPT-AUTO-Free-Exams)
+- 材料专业资料：[`NJUPT-IAM-FREE-Exams`](https://github.com/NJUPTFreeExams/NJUPT-IAM-FREE-Exams)
+- 管理专业资料：[`NJUPT-Managing-Free-Exams`](https://github.com/NJUPTFreeExams/NJUPT-Managing-Free-Exams)
+- 通信工程专业资料：[`NJUPT-TE-Free-Exams`](https://github.com/NJUPTFreeExams/NJUPT-TE-Free-Exams)
 
-请务必阅读：[`Pull Request 攻略`](/homepage/uploadguide)
+如果您希望提交的资料无法分类到这些仓库中，请在通识课资料仓库中[提交议题（Issue）](https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams/issues/new/choose)。
 
-### 📌如果你想给我们提 Issue
+## 检索及下载指南
 
-请务必阅读：[`Issue 指南`](/homepage/issueguide)
+由于资料仓库都位于 GitHub 上，所以您必须确保您能够访问 GitHub。为此，您可以尝试以下方法：
 
-## 🔍📖资料列表📚
-<div>
-    <Card title="数理基础类" icon="document">
-    1. 高等数学A（上）
-    2. 线性代数与解析几何 
-    3. 高等数学A（下）✅ (Last updated: 2021-10-25)
-    4. 物理实验（上) 
-    5. 大学物理（上）✅ (Last updated: 2021-10-25)
-    6. 大学物理（下） 
-    7. 离散数学 ✅ (Last updated: 2023-12-23)
-    8. 物理实验（上）✅ (Last updated: 2023-06-10)
-    9. 物理实验（下）✅ (Last updated: 2024-01-03)
-    10. 概率论与数理统计（概率论与随机过程）✅ (Last updated: 2022-06-13)
-    </Card>    
-    <Card title="管理学类" icon="laptop">
-    1. 现代管理科学基础
-    2. 技术经济学
-    3. 市场营销
-    4. 公司人力资源管理
-    5. 管理学原理B ✅ (Last updated: 2023-06-23)
-    6. 市场营销 B
-    </Card>
-    <Card title="电子信息类" icon="open-book">
-    1. 电路分析基础C ✅ (Last updated: 2021-08-27)
-    2. 模拟电子电路C
-    3. 通信原理C
-    4. 信号与系统C
-    5. 数字电路与逻辑设计B ✅ (Last updated: 2021-08-05)
-    6. 电工电子基础实验B
-    7. 电工电子实验（下）
-    8. 信号与系统A
-    9. 电路分析基础A ✅ (Last updated: 2021-10-25)
-    10. 数字电路与逻辑设计A ✅ (Last updated: 2021-08-05)
-    </Card>
-    <Card title="编程语言类" icon="open-book">
-    1. 高级语言程序设计
-    2. 算法分析与设计C ✅ (Last updated: 2022-06-13)
-    </Card>
-    <Card title="其他" icon="translate">
-    1. 近现代史 ✅ (Last updated: 2023-06-10)
-    2. 军事理论 ✅ (Last updated: 2022-11-30)
-    3. 中国文化概论 ✅ (Last updated: 2021-10-25)
-    4. 工程制图
-    5. 劳动与就业创业 ✅ (Last updated: 2023-5-20)
-    6. 红色校史专题课 ✅ (Last updated: 2022-12-06)
-    7. 毛概 ✅ (Last updated: 2023-02-07)
-    8. 马原 ✅ (Last updated: 2024-01-07)
-    9. 心理健康 ✅ (Last updated: 2023-5-20)
-    10. 体育理论考试 ✅ (Last updated: 2024-01-04)
-    11. 创新与创业管理B ✅ (Last updated: 2024-01-10)
-  </Card>
-</div>
+- 使用 **代理**（最为推荐的方法）
+- 使用 [Watt Toolkit](https://steampp.net/) 本地反向代理加速 GitHub（操作见下图）
+- 修改 hosts 文件（参考：[解决 GitHub 的 host 域名被限制的问题](https://iphysresearch.github.io/blog/post/programing/linux_shell/hosts/)）
+
+![Watt Toolkit 加速 GitHub](../../../assets/watt-toolkit-github.webp)
+
+除了通识课资料仓库外，到目前为止，其他资料仓库并未建立门户网站。这些未建立门户网站的资料仓库的目录结构相对简单，直接进入检索即可。
+
+对于[通识课资料仓库](https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams)，由于此门户网站的建立，目录结构更为复杂。这是由于门户网站的网站代码也存储在了此仓库中。有效的资料分散于下面的目录中：
+
+- `public/`
+- `src/content/`
+
+在您检索到您需要的资料后，您可以通过以下方式下载：
+
+- 点击文件名，进入文件详情页，点击右上角的下载按钮进行下载（见下图）
+- 点击文件名，进入文件详情页，复制网址，并前往 [GitHub Proxy](https://ghp.ci/) 粘贴地址进行下载
+
+此外，您也可以使用 [Git](https://git-scm.com/)、任意 Git 客户端或任意 GitHub 下载工具进行下载。关于 Git 和 GitHub 的使用方法，可以参考：
+
+- [Git 教程 | 廖雪峰的官方网站](https://liaoxuefeng.com/books/git/introduction/index.html)
+- [简明 Git 教程 | BlockLune's Blog](https://blocklune.cc/zh/posts/simple-git-tutorial/)
+- [简明 GitHub 教程 | BlockLune's Blog](https://blocklune.cc/zh/posts/simple-github-tutorial/)
+
+## 贡献指南
+
+我们的初衷是方便同学们的期末复习，接受的资料的形式包括但不限于：
+
+- 考试试卷
+- 复习 PPT
+- 习题 & 解答
+- 课件
+- 选课 / 考试攻略
+
+但是，我们**不接受**以下形式的资料：
+
+- 电子版书籍、教材，我们认为这些内容会对版权产生侵犯。
+- 课程实验代码，我们认为这些内容需要学生自己探索。
+- 超过 100M 的单个文件，因为本项目没有启用 `git-lfs`。
+
+我们建议的资料格式为 PDF 和 [Markdown](https://markdown.com.cn/)。这样的资料可以直接在线预览，也方便其他同学在线查看。如果您的资料是其他格式，我们建议您将其转换为 PDF 或 Markdown 格式。
+
+(TBC)
+
+## 议题提交指南
+
+(TBC)

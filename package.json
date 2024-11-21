@@ -14,6 +14,7 @@
     "@astrojs/starlight": "^0.15.4",
     "astro": "^4.2.1",
     "rehype-katex": "^7.0.0",
+    "remark-emoji": "^5.0.1",
     "remark-math": "^6.0.0",
     "sharp": "^0.32.5"
   }
