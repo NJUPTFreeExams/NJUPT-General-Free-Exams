@@ -3,6 +3,7 @@ import starlight from "@astrojs/starlight";
 import remarkMath from "remark-math";
 import remarkEmoji from "remark-emoji";
 import rehypeKatex from "rehype-katex";
+import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
@@ -138,6 +139,6 @@ export default defineConfig({
 	],
 	markdown: {
 		remarkPlugins: [remarkMath, remarkEmoji],
-		rehypePlugins: [rehypeKatex],
+		rehypePlugins: [rehypeKatex, [rehypeExternalLinks, { target: "_blank" }]],
 	},
 });
