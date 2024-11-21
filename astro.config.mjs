@@ -27,15 +27,6 @@ export default defineConfig({
 			customCss: ["./src/styles/custom.css"],
 			sidebar: [
 				{ label: "首页", link: "home" },
-				{
-					label: "指南",
-					collapsed: true,
-					items: [
-						{ label: "UserGuide", link: "/home/userguide" },
-						{ label: "IssueGuide", link: "/home/issueguide" },
-						{ label: "UploadGuide", link: "/home/uploadguide" },
-					],
-				},
 				//指向内部或外部页面的链接
 				{
 					label: "计算机学院",
