@@ -8,15 +8,12 @@ title: NJUPTFreeExams 组织及其项目介绍
 
 ## 说明
 
-在使用本项目的资料之前，请务必阅读 [《用户指南》](/home/user-guide)。
-
 1. **本组织收集整理的资料仅供个人学习交流使用，请在下载后 24 小时内删除。严禁删改、二传，或用作商业用途！如有侵权，请及时与我们联系。**
 2. 资料仅供参考，请自行判断适用性。
 3. 取决于资料的格式及其贡献方法，您可以以在线或下载的方式查看贡献者们贡献的资料，具体请见[检索及下载指南](#检索及下载指南)。
 4. 部分资料已经有些年头，如果大家手头有更好的资料，欢迎[提交拉取请求（Pull Request, PR）](https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams/compare)，具体请见[贡献指南](#贡献指南)。
 5. 如果您发现资料存在问题，或者对于本项目有任何改进建议，请[提交议题（Issue）](https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams/issues/new/choose)，具体请见[议题提交指南](#议题提交指南)。
-
-如果觉得本仓库有用，请在 GitHub 上为我们点个:star:！来自大家的关注、维护和贡献，才是让这个资料集继续存在的核心动力:smiling_face_with_three_hearts:。
+6. 如果觉得本仓库有用，请在 GitHub 上为我们点个:star:！来自大家的关注、维护和贡献，才是让这个资料集继续存在的核心动力:smiling_face_with_three_hearts:。
 
 ## 资料分类
 
@@ -53,29 +50,64 @@ title: NJUPTFreeExams 组织及其项目介绍
 - 点击文件名，进入文件详情页，点击右上角的下载按钮进行下载（见下图）
 - 点击文件名，进入文件详情页，复制网址，并前往 [GitHub Proxy](https://ghp.ci/) 粘贴地址进行下载
 
-此外，您也可以使用 [Git](https://git-scm.com/)、任意 Git 客户端或任意 GitHub 下载工具进行下载。关于 Git 和 GitHub 的使用方法，可以参考：
+此外，您也可以使用 [Git](https://git-scm.com/)、任意 Git 客户端或任意 GitHub 下载工具进行下载。
+
+关于 Git 和 GitHub 的使用方法，可以参考：
 
 - [Git 教程 | 廖雪峰的官方网站](https://liaoxuefeng.com/books/git/introduction/index.html)
 - [简明 Git 教程 | BlockLune's Blog](https://blocklune.cc/zh/posts/simple-git-tutorial/)
 - [简明 GitHub 教程 | BlockLune's Blog](https://blocklune.cc/zh/posts/simple-github-tutorial/)
 
+下面是一些 GitHub 的下载工具：
+
+- [`github-directory-downloader`](https://github.com/Momo707577045/github-directory-downloader)
+- [`DownGit`](https://github.com/MinhasKamal/DownGit)
+- [`dclone`](https://github.com/ykfe/dclone)
+- [`GitZip`](https://chromewebstore.google.com/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn)
+
 ## 贡献指南
+
+### 资料形式
 
 我们的初衷是方便同学们的期末复习，接受的资料的形式包括但不限于：
 
-- 考试试卷
-- 复习 PPT
-- 习题 & 解答
-- 课件
-- 选课 / 考试攻略
+- :white_check_mark: 考试试卷
+- :white_check_mark: 复习 PPT
+- :white_check_mark: 习题 & 解答
+- :white_check_mark: 课件
+- :white_check_mark: 选课 / 考试攻略
 
 但是，我们**不接受**以下形式的资料：
 
-- 电子版书籍、教材，我们认为这些内容会对版权产生侵犯。
-- 课程实验代码，我们认为这些内容需要学生自己探索。
-- 超过 100M 的单个文件，因为本项目没有启用 `git-lfs`。
+- :x: 电子版书籍、教材，我们认为这些内容会对版权产生侵犯。
+- :x: 课程实验代码，我们认为这些内容需要学生自己探索。
+- :x: 超过 100M 的单个文件，因为本项目没有启用 `git-lfs`。
+
+### 资料格式
 
 我们建议的资料格式为 PDF 和 [Markdown](https://markdown.com.cn/)。这样的资料可以直接在线预览，也方便其他同学在线查看。如果您的资料是其他格式，我们建议您将其转换为 PDF 或 Markdown 格式。
+
+对于 PowerPoint 演示文稿、Word 文档等格式的资料，您可以使用以下方法转换为 PDF 格式：
+
+- 使用 Microsoft Office 或 WPS Office 等办公软件，导出为 PDF 格式
+- 使用 Adobe Acrobat 等 PDF 编辑软件，将其另存为 PDF 格式
+- 使用 [扫描全能王](https://www.camscanner.com/)
+- 使用 [HiPDF](https://www.hipdf.cn/)
+- 使用 [iLovePDF](https://www.ilovepdf.com/)
+- 使用 [PDF365](https://www.pdf365.cn/)
+
+在转换完成后，您还应该对其进行压缩，以减少文件大小。上面提供的 HiPDF、iLovePDF 等平台就提供了压缩功能。
+
+### 资料命名
+
+资料应当分类放入文件夹中。例如，我们推荐将课件统一存放在 `课件` 文件夹下，将历年考试试卷统一存放在 `试卷` 文件夹下。
+
+您应当对资料进行适当的重命名：
+
+- 使用 `第1章-1-课程介绍` 代替 `第一章-1-课程介绍` 有利于资料的自动排序；
+- 在您能确定一份资料的时间信息时，为资料添加适当的后缀（特别是针对试卷），例如使用 `21-22-1` 表示它是 `2021-2022 学年第 1 学期` 的资料（考虑到长度，不再推荐使用 `2021-2022-1` 这样的形式）。
+
+### 提起拉取请求（PR）
 
 (TBC)
 
