@@ -1,10 +1,8 @@
 ---
 /// <reference path="../../node_modules/@astrojs/starlight/virtual.d.ts"/>
-import type { Props } from '@astrojs/starlight/props';
-
-import { EditLink, LastUpdated } from 'virtual:starlight/components';
-
-import Twikoo from '../components/Twikoo.astro';
+import type { Props } from "@astrojs/starlight/props";
+import { EditLink, LastUpdated } from "virtual:starlight/components";
+import Twikoo from "../components/Twikoo.astro";
 ---
 
 <footer>
@@ -12,7 +10,6 @@ import Twikoo from '../components/Twikoo.astro';
 		<EditLink {...Astro.props} />
 		<LastUpdated {...Astro.props} />
 	</div>
-	该页总访问量<span id="busuanzi_value_page_pv"></span>次
 	<Twikoo />
 </footer>
 
