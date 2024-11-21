@@ -50,6 +50,8 @@ title: NJUPTFreeExams 组织及其项目介绍
 - 点击文件名，进入文件详情页，点击右上角的下载按钮进行下载（见下图）
 - 点击文件名，进入文件详情页，复制网址，并前往 [GitHub Proxy](https://ghp.ci/) 粘贴地址进行下载
 
+![下载单个文件的按钮](../../../assets/download-raw-file-from-github-website.webp)
+
 此外，您也可以使用 [Git](https://git-scm.com/)、任意 Git 客户端或任意 GitHub 下载工具进行下载。
 
 关于 Git 和 GitHub 的使用方法，可以参考：
@@ -109,8 +111,29 @@ title: NJUPTFreeExams 组织及其项目介绍
 
 ### 提起拉取请求（PR）
 
-(TBC)
+为了向仓库贡献资料，您需要首先 Fork 相应的仓库，对其做出更改并推送（Push），然后，发起一个拉取请求（Pull Request），请求我们拉取（Pull）您的更改内容。
+
+下面是一个在 GitHub 网站进行操作的完整示例：
+
+1. 前往您想要贡献的仓库首页，点击右上角的 `Fork` 按钮，在下一个页面点击右下角的 `Create fork` 按钮。如果您已经进行过此操作，那么您应该点击右上角的头像，在下拉栏中点击 `Your repositories`，之后找到并点击相应的仓库。页面会自动跳转到 Fork 后的仓库，您应该在左上角看到 `forked from ...` 字样。
+3. 打开想要上传到的文件夹，点击右上角的 `Add file`，在下拉栏中选择 `Upload files`。
+4. 将想要上传的 **经过压缩的** 文件或文件夹拖入页面中央的方框内，并等待上传完成。
+5. 在 `Commit changes` 卡片内，填写您的提交说明，可选地，您还可以附加更多说明。在最下方，选择 `Create a new branch for this commit and start a pull a request`，并在下方填入一个使用英文和 `-` 符号写出的具有描述性的名称。
+
+![Commit changes](../../../assets/commit-changes.webp)
+
+6. 在下一个页面，参考 [`更新 JAVA 程序设计 （2021-08） #22`](https://github.com/NJUPTFreeExams/NJUPT-CS-Free-Exams/pull/22) 描述您此次贡献的内容。
+
+您也可以参考（将文章中的 “代码” 理解为您希望贡献的文件即可）：
+
+- [为一个开源项目贡献代码 | 简明 GitHub 教程 | BlockLune's Blog](https://blocklune.cc/zh/posts/simple-github-tutorial/#%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E8%B4%A1%E7%8C%AE%E4%BB%A3%E7%A0%81)
 
 ## 议题提交指南
 
-(TBC)
+按照下面的步骤，以提交一个议题，指出问题或提出更改意见：
+
+1. 前往您想要提交议题的仓库首页，点击上方的 `Issues` 按钮。
+2. 在下个页面，点击右侧绿色的 `New issue` 按钮。
+3. 在下个页面，填写标题和描述。
+
+标题应该简洁清晰地概括问题，描述则应该细致地描述您的问题，可以参考 [`FIX: 文件 / 计算机通信与网络 / 2017-2018-2.pdf 中可能存在内容错误`](https://github.com/NJUPTFreeExams/NJUPT-CS-Free-Exams/issues/20)。
