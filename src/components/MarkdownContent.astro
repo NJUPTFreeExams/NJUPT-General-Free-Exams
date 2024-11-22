@@ -1,67 +1,52 @@
 ---
-import type { Props } from '@astrojs/starlight/props';
-import '@astrojs/starlight/style/markdown.css';
-const {entry} = Astro.props;
+import type { Props } from "@astrojs/starlight/props";
+import "@astrojs/starlight/style/markdown.css";
+import * as fs from "node:fs";
+import * as path from "node:path";
+
+const { entry } = Astro.props;
 const course = entry.data.title;
 
-import * as fs from 'fs';
-import * as path from 'path';
-
 function getAllFilesInFolder(folderPath: string): string[] {
-  const filesList: string[] = [];
+	const filesList: string[] = [];
 
-  function traverseDirectory(currentPath: string) {
-    const files = fs.readdirSync(currentPath);
-
-    files.forEach((file) => {
-      const filePath = path.join(currentPath, file);
-
-      if (fs.statSync(filePath).isDirectory()) {
-        traverseDirectory(filePath); // Recursive call for subdirectories
-      } else {
-        filesList.push(filePath);
-      }
-    });
-  }
-
-  traverseDirectory(folderPath);
-  return filesList;
+	function traverseDirectory(currentPath: string) {
+		const files = fs.readdirSync(currentPath);
+		for (const file of files) {
+			const filePath = path.join(currentPath, file);
+			if (fs.statSync(filePath).isDirectory()) {
+				traverseDirectory(filePath); // Recursive call for subdirectories
+			} else {
+				filesList.push(filePath);
+			}
+		}
+	}
+	traverseDirectory(folderPath);
+	return filesList;
 }
 
 function splitString(str: string): string[] {
-    const index = str.indexOf('/', 1);
-    if (index === -1) {
-        // 如果字符串中不存在 '/'，则返回整个字符串作为数组中的唯一元素
-        return [str];
-    } else {
-        // 使用 slice 方法将字符串从第一个 '/' 分割成两部分
-        const firstPart = str.slice(1, index);
-        const secondPart = str.slice(index + 1);
-        return [firstPart, secondPart];
-    }
+	const slashIndex = str.indexOf("/", 1);
+	if (slashIndex === -1) return [str];
+	return [str.slice(1, slashIndex), str.slice(slashIndex + 1)];
 }
 
-
-const filteredList: string[] = getAllFilesInFolder('./public/')
-  .filter(item => item.includes(course))
-  .map(item => item.replace(/\\/g, '/').substring(6));
+const filteredList: string[] = getAllFilesInFolder("./public/")
+	.filter((item) => item.includes(course))
+	.map((item) => item.replace(/\\/g, "/").substring(6));
 
 const filesByFolder: Record<string, string[]> = {};
-//console.log(filteredList)
 filteredList.map((post: string) => {
-    const folders: string[] = splitString(post.slice(1, post.lastIndexOf('/')));
-    const fileName: string = post.slice(post.lastIndexOf('/')+1);
-    // const folders: string[] = pathArray.slice(1, -1);
-    const subFolder: string = folders.length > 0 ? folders[folders.length - 1] : '';
-    console.log(folders)
-    if (!filesByFolder[subFolder]) {
-        filesByFolder[subFolder] = [];
-    }
-    filesByFolder[subFolder].push(fileName);
-
-    return null;
+	const folders: string[] = splitString(post.slice(1, post.lastIndexOf("/")));
+	const fileName: string = post.slice(post.lastIndexOf("/") + 1);
+	const subFolder: string =
+		folders.length > 0 ? folders[folders.length - 1] : "";
+	if (!filesByFolder[subFolder]) {
+		filesByFolder[subFolder] = [];
+	}
+	filesByFolder[subFolder].push(fileName);
+	return null;
 });
-console.log(filesByFolder)
 ---
 
 <div class="sl-markdown-content"><slot /></div>
