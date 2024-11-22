@@ -37,60 +37,56 @@ export default defineConfig({
 				},
 				{
 					label: "计算机学院",
-					// 自动生成一个链接分组，用于 'CS' 目录。
 					autogenerate: {
-						directory: "CS",
+						directory: "computer-science",
 					},
 				},
 				{
 					label: "理学院",
-					// 自动生成一个链接分组，用于 'CS' 目录。
 					autogenerate: {
-						directory: "lxy",
+						directory: "science",
 					},
 				},
 				{
 					label: "通信与信息工程学院",
 					autogenerate: {
-						directory: "SCIE",
+						directory: "communications-and-information-engineering",
 					},
 				},
 				{
 					label: "经济学院",
 					autogenerate: {
-						directory: "Economics",
+						directory: "economics",
 					},
 				},
 				{
 					label: "集成电路科学与工程学院",
 					autogenerate: {
-						directory: "IC",
+						directory: "integrated-circuit-science-and-engineering",
 					},
 				},
 				{
 					label: "管理学院",
 					autogenerate: {
-						directory: "Management",
+						directory: "management",
 					},
 				},
 				{
 					label: "马克思主义学院",
 					autogenerate: {
-						directory: "Marx",
+						directory: "marxism",
 					},
 				},
 				{
 					label: "外国语学院",
-					// 自动生成一个链接分组，用于 'CS' 目录。
 					autogenerate: {
-						directory: "FLS",
+						directory: "foreign-languages",
 					},
 				},
 				{
 					label: "教育与技术学院",
-					// 自动生成一个链接分组，用于 'CS' 目录。
 					autogenerate: {
-						directory: "edu",
+						directory: "education-and-technology",
 					},
 				},
 				{
