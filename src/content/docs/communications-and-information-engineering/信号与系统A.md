@@ -1,4 +1,4 @@
 ---
-title: 信号与系统C
-description: 信号与系统C
+title: 信号与系统A
+description: 信号与系统A
 ---
