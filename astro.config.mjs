@@ -26,10 +26,18 @@ export default defineConfig({
 			},
 			customCss: ["./src/styles/custom.css"],
 			sidebar: [
-				{ label: "组织及项目简介", link: "home" },
 				{
-					label: "关于 NJUPT-General-Free-Exams 的特别说明",
-					link: "home/about-general",
+					label: "简介与指南",
+					items: [
+						{
+							label: "组织及项目介绍",
+							link: "home",
+						},
+						{
+							label: "关于 NJUPT-General-Free-Exams 的特别说明",
+							link: "home/about-general",
+						},
+					],
 				},
 				{
 					label: "Markdown 资料（保留目录）",
