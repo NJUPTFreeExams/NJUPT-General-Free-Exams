@@ -134,6 +134,10 @@ export default defineConfig({
 				Footer: "./src/components/Footer.astro",
 				MarkdownContent: "./src/components/MarkdownContent.astro",
 			},
+			editLink: {
+				baseUrl:
+					"https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams/edit/master",
+			},
 			lastUpdated: true,
 		}),
 	],

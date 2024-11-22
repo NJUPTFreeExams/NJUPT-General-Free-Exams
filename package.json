@@ -1,5 +1,5 @@
 {
-  "name": "resources-share-in-astro",
+  "name": "njupt-free-exams",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -11,12 +11,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.15.4",
-    "astro": "^4.2.1",
+    "@astrojs/starlight": "^0.29.2",
+    "astro": "^4.16.14",
     "rehype-external-links": "^3.0.0",
-    "rehype-katex": "^7.0.0",
+    "rehype-katex": "^7.0.1",
     "remark-emoji": "^5.0.1",
     "remark-math": "^6.0.0",
-    "sharp": "^0.32.5"
+    "sharp": "^0.32.6"
   }
 }
