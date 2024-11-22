@@ -27,7 +27,7 @@ export default defineConfig({
 			},
 			customCss: ["./src/styles/custom.css"],
 			sidebar: [
-				{ label: "首页", link: "home" },
+				{ label: "简介", link: "home" },
 				//指向内部或外部页面的链接
 				{
 					label: "计算机学院",
