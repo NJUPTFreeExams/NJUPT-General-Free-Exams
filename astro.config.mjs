@@ -30,6 +30,12 @@ export default defineConfig({
 				{ label: "简介", link: "home" },
 				//指向内部或外部页面的链接
 				{
+					label: "Markdown 资料（保留目录）",
+					autogenerate: {
+						directory: "reserved",
+					},
+				},
+				{
 					label: "计算机学院",
 					// 自动生成一个链接分组，用于 'CS' 目录。
 					autogenerate: {
@@ -94,14 +100,7 @@ export default defineConfig({
 					},
 				},
 				{
-					label: "贡献文档",
-					collapsed: true,
-					autogenerate: {
-						directory: "reserve",
-					},
-				},
-				{
-					label: "👉了解 Astro",
+					label: "了解 Astro",
 					link: "https://astro.build/",
 				},
 			],
