@@ -128,11 +128,11 @@ import { FileTree } from '@astrojs/starlight/components';
 - 如果您希望贡献的资料是 Markdown 格式的，我们建议您将其放入 `/src/content/docs/reserved/` 目录下。这样，您的资料将直接显示在门户网站上。
 
 :::note
-可选地，您可以为您的 Markdown 文件添加 YAML 头部（Frontmatter），以提供更多的信息。例如：
+为了使本门户网站能识别您的资料，您**必须**为您的 Markdown 文件添加 YAML 头部（Frontmatter），以提供更多的信息。例如：
 
 ```markdown
 ---
-title: 文件标题
+title: 文件标题（必选）
 description: 内容描述（可选）
 ---
 ```
