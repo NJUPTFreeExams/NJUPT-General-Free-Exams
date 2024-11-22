@@ -39,3 +39,13 @@ import { FileTree } from '@astrojs/starlight/components';
 
 - [入门指南 | Astro Docs](https://docs.astro.build/zh-cn/getting-started/)
 - [开始使用 | Starlight](https://starlight.astro.build/zh-cn/getting-started/)
+
+为了添加或更新学院分类，您需要：
+
+1. 前往 `src/content/docs/` 并添加一个语意性的目录。可以参考我们已经建立的目录的命名，例如对应 “计算机学院” 的 `computer-science` 目录。
+2. 编辑 `astro.config.mjs` 文件。
+
+为了添加一门课程，您需要：
+
+1. 前往 `public/` 并添加一个以课程名称命名的目录。
+2. 前往 `src/content/docs/` 目录，找到所开课程对应学院的目录，并添加一个 Markdown 文件。文件名为课程名称。文件内容必须包含 Frontmatter，其中 `title` 为课程名称。
