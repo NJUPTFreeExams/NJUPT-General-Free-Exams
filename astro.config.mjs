@@ -7,8 +7,7 @@ import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://njuptfreeexams.github.io",
-	// base: '/NJUPT-General-Free-Exams',
+	site: "https://njuptfreeexams.netlify.app",
 	vite: {
 		assetsInclude: ["**/*.ppt", "**/*.pptx", "**/*.doc", "**/*.docx"],
 	},
