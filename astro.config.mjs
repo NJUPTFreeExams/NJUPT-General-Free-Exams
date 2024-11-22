@@ -93,14 +93,16 @@ export default defineConfig({
 					},
 				},
 				{
+					label: "社会与人口学院",
+					autogenerate: {
+						directory: "sociology-and-population-studies",
+					},
+				},
+				{
 					label: "其他",
 					autogenerate: {
 						directory: "others",
 					},
-				},
-				{
-					label: "了解 Astro",
-					link: "https://astro.build/",
 				},
 			],
 			head: [
