@@ -33,19 +33,23 @@ import { FileTree } from '@astrojs/starlight/components';
 
 我们的门户网站是使用 [Astro](https://astro.build) 构建的，并且使用了 [starlight](https://starlight.astro.build/) 这个模板。`src/content/` 这个特殊的目录是 Astro 中用于存放[内容集合](https://docs.astro.build/zh-cn/guides/content-collections/) 的目录，而其中的 `docs/` 则是 starlight 的要求。在您将资料放入 `src/content/docs/reserved/` 目录下后，在构建网站时，Astro 和 starlight 将直接能够读取这些资料，以便将其直接显示在门户网站上。
 
-## 如何为门户网站本身贡献代码
-
-如果您希望为门户网站本身贡献代码，您需要了解一些前端技术的基本知识。以下文档将会对您有所帮助：
-
-- [入门指南 | Astro Docs](https://docs.astro.build/zh-cn/getting-started/)
-- [开始使用 | Starlight](https://starlight.astro.build/zh-cn/getting-started/)
+## 如何添加学院
 
 为了添加或更新学院分类，您需要：
 
 1. 前往 `src/content/docs/` 并添加一个语意性的目录。可以参考我们已经建立的目录的命名，例如对应 “计算机学院” 的 `computer-science` 目录。
 2. 编辑 `astro.config.mjs` 文件。
 
+## 如何添加课程
+
 为了添加一门课程，您需要：
 
 1. 前往 `public/` 并添加一个以课程名称命名的目录。
 2. 前往 `src/content/docs/` 目录，找到所开课程对应学院的目录，并添加一个 Markdown 文件。文件名为课程名称。文件内容必须包含 Frontmatter，其中 `title` 为课程名称。
+
+## 如何为门户网站本身贡献代码
+
+如果您希望为门户网站本身贡献代码，您需要了解一些前端技术的基本知识。以下文档将会对您有所帮助：
+
+- [入门指南 | Astro Docs](https://docs.astro.build/zh-cn/getting-started/)
+- [开始使用 | Starlight](https://starlight.astro.build/zh-cn/getting-started/)
