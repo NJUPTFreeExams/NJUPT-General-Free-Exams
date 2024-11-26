@@ -17,6 +17,7 @@
     "rehype-katex": "^7.0.1",
     "remark-emoji": "^5.0.1",
     "remark-math": "^6.0.0",
-    "sharp": "^0.32.6"
+    "sharp": "^0.32.6",
+    "typescript": "^5.7.2"
   }
 }
