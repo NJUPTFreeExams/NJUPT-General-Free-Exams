@@ -28,15 +28,36 @@ export default defineConfig({
       customCss: ["./src/styles/custom.css"],
       sidebar: [
         {
-          label: "简介与指南",
+          label: "简介",
           items: [
             {
-              label: "组织及项目介绍",
-              link: "home",
+              label: "组织与项目介绍",
+              link: "intro",
+            },
+          ],
+        },
+        {
+          label: "指南",
+          items: [
+            {
+              label: "资料分类说明",
+              link: "guides/categories",
+            },
+            {
+              label: "检索与下载指南",
+              link: "guides/browse-and-download",
+            },
+            {
+              label: "上传与贡献指南",
+              link: "guides/upload-and-contribute",
+            },
+            {
+              label: "问题与建议提交指南",
+              link: "guides/report-issues",
             },
             {
               label: "关于 NJUPT-General-Free-Exams 的特别说明",
-              link: "home/about-general",
+              link: "guides/about-general",
             },
           ],
         },
