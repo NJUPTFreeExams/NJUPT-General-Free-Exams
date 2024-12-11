@@ -1,21 +1,20 @@
 .badge-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: baseline;
-    min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: baseline;
+  min-width: 100%;
 }
-
 
 .badge {
-    align-items: center;
-    margin: 0 5px;
+  align-items: center;
+  margin: 0 5px;
 }
 
-.centertext {
-    display: flex;
-    font-size: 120%;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 0px 0px 10px;
+.center-text {
+  display: flex;
+  font-size: 120%;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 0px 10px;
 }

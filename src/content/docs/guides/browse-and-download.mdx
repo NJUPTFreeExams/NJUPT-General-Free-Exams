@@ -1,0 +1,52 @@
+---
+title: 检索与下载指南
+---
+
+本文介绍了如何在本项目中检索资料，以及如何下载这些资料。
+
+## 检查网络连接
+
+由于我们的资料仓库都位于 GitHub 上，所以您必须确保您能够访问 GitHub。为此，您可以尝试以下方法：
+
+- 使用 **代理**（最为推荐的方法）
+- 使用 [Watt Toolkit](https://steampp.net/) 本地反向代理加速 GitHub（操作见下图）
+- 修改 hosts 文件（参考：[解决 GitHub 的 host 域名被限制的问题](https://iphysresearch.github.io/blog/post/programing/linux_shell/hosts/)）
+
+![Watt Toolkit 加速 GitHub](../../../assets/watt-toolkit-github.webp)
+
+## 检索资料
+
+我们的资料分类存放在了多个不同的仓库中，您可以参考[《资料分类说明》](/guides/categories)了解这些仓库及其地址。
+
+您目前正在访问的门户网站（[NJUPTFreeExams](https://njuptfreeexams.netlify.app/)）构建在其中的通识课仓库（[`NJUPT-General-Free-Exams`](https://github.com/NJUPTFreeExams/NJUPT-General-Free-Exams)）之上，因此，您可以在左侧的导航栏中看到（几乎）所有位于通识课仓库内的资料。但是，**除了通识课仓库之外的其他仓库并未建立门户网站**，**您必须直接进入 GitHub 仓库检索资料**。
+
+幸运的是，也正这些仓库没有建立门户网站，它们的目录结构相对简单，您可以直接进入检索。
+
+对于通识课仓库，如果您希望直接进入仓库检索资料，可以重点关注以下目录：
+
+- `public/`
+- `src/content/reserved`
+
+## 下载资料
+
+在您检索到您需要的资料后，您可以通过以下方式下载：
+
+- 点击文件名，进入文件详情页，点击右上角的下载按钮进行下载（见下图）
+- 点击文件名，进入文件详情页，复制网址，并前往 [GitHub Proxy](https://ghp.ci/) 粘贴地址进行下载
+
+![下载单个文件的按钮](../../../assets/download-raw-file-from-github-website.webp)
+
+此外，您也可以使用 [Git](https://git-scm.com/)、任意 Git 客户端或任意 GitHub 下载工具进行下载。
+
+关于 Git 和 GitHub 的使用方法，可以参考：
+
+- [Git 教程 | 廖雪峰的官方网站](https://liaoxuefeng.com/books/git/introduction/index.html)
+- [简明 Git 教程 | BlockLune's Blog](https://blocklune.cc/zh/posts/simple-git-tutorial/)
+- [简明 GitHub 教程 | BlockLune's Blog](https://blocklune.cc/zh/posts/simple-github-tutorial/)
+
+下面是一些 GitHub 的下载工具：
+
+- [`github-directory-downloader`](https://github.com/Momo707577045/github-directory-downloader)
+- [`DownGit`](https://github.com/MinhasKamal/DownGit)
+- [`dclone`](https://github.com/ykfe/dclone)
+- [`GitZip`](https://chromewebstore.google.com/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn)
