@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.29.2",
-    "astro": "^4.16.14",
+    "astro": "^4.16.18",
     "rehype-external-links": "^3.0.0",
     "rehype-katex": "^7.0.1",
     "remark-emoji": "^5.0.1",
